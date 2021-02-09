@@ -2,6 +2,7 @@ package com.example.mylibraryfour;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class AllBooksActivity extends AppCompatActivity {
         adapter = new BookRecViewAdapter(this);
         booksRecView = findViewById(R.id.booksRecView);
         booksRecView.setAdapter(adapter);
-        booksRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        booksRecView.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<Book> books = new ArrayList<>();
         //check if adding a jpeg from the internet causes a crash
