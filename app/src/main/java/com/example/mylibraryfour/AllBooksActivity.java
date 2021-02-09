@@ -26,7 +26,7 @@ public class AllBooksActivity extends AppCompatActivity {
         ArrayList<Book> books = new ArrayList<>();
         //check if adding a jpeg from the internet causes a crash
         books.add(new Book(1, "Dune", "Frank Herbert", 300, "https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg",
-                "space odyssey", "long description"));
+                "Test 1", "long description"));
         adapter.setBooks(books);
     }
 }
