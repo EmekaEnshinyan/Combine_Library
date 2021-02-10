@@ -21,8 +21,8 @@ public class BookActivity extends AppCompatActivity {
 
         InitViews();
         //TODO: get data from recview
-        Book book = new Book(1, "book name", "author 2", 100, "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__340.jpg",
-                "Test 2", "Long Desc");
+        Book book = new Book(1, "Dune", "Frank Herbert", 300, "https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg",
+                "Test 1", "long description");
         setData(book);
 
     }
@@ -49,9 +49,10 @@ public class BookActivity extends AppCompatActivity {
         txtBookName.setText(book.getName());
         txtAuthorName.setText(book.getAuthor());
         txtPages.setText(String.valueOf(book.getPages()));
-        txtDescription.setText(book.getLongDesc());/*
+        txtDescription.setText(book.getLongDesc());
         Glide.with(this)
                 .asBitmap().load(book.getImageUrl())
-                .into(book.getImageUrl());*/
+                .load(book.getImageUrl());
+
     }
 }
