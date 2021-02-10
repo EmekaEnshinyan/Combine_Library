@@ -28,6 +28,8 @@ public class AllBooksActivity extends AppCompatActivity {
         //check if adding a jpeg from the internet causes a crash
         books.add(new Book(1, "Dune", "Frank Herbert", 300, "https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg",
                 "Test 1", "long description"));
+        books.add(new Book(1, "book name", "author 2", 100, "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__340.jpg",
+                "Test 2", "Long Desc"));
         adapter.setBooks(books);
     }
 }
