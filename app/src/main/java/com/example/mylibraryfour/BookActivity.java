@@ -51,8 +51,10 @@ public class BookActivity extends AppCompatActivity {
         txtPages.setText(String.valueOf(book.getPages()));
         txtDescription.setText(book.getLongDesc());
         Glide.with(this)
-                .asBitmap().load(book.getImageUrl())
-                .load(book.getImageUrl());
+                .asBitmap()
+                .load(book.getImageUrl())
+                .into(bookImage);
+
 
     }
 }
