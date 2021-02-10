@@ -20,9 +20,24 @@ public class BookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book);
 
         InitViews();
+        String longDesc = "Dune is set in the distant future amidst a feudal " +
+                "\ninterstellar society in which various noble houses control " +
+                "\nplanetary fiefs. It tells the story of young Paul Atreides, " +
+                "\nwhose family accepts the stewardship of the planet Arrakis. " +
+                "\nWhile the planet is an inhospitable and sparsely populated " +
+                "\ndesert wasteland, it is the only source of melange, or the spice," +
+                "\na drug that extends life and enhances mental abilities. " +
+                "\nMelange is also necessary for space navigation, which requires" +
+                "\na kind of multidimensional awareness and foresight that only" +
+                "\nthe drug provides. As melange can only be produced on Arrakis," +
+                "\ncontrol of the planet is thus a coveted and dangerous " +
+                "\nundertaking. The story explores the multi-layered interactions " +
+                "\nof politics, religion, ecology, technology, and human emotion, " +
+                "\nas the factions of the empire confront each other in a struggle" +
+                "\nfor the control of Arrakis and its spice.";
         //TODO: get data from recview
         Book book = new Book(1, "Dune", "Frank Herbert", 300, "https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg",
-                "Test 1", "long description");
+                "Test 1", longDesc);
         setData(book);
 
     }
