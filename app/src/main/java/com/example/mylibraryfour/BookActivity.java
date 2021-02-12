@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -25,7 +26,7 @@ public class BookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book);
 
         InitViews();
-/*        String longDesc = "Dune is set in the distant future amidst a feudal " +
+        String longDesc = "Dune is set in the distant future amidst a feudal " +
                 "\ninterstellar society in which various noble houses control " +
                 "\nplanetary fiefs. It tells the story of young Paul Atreides, " +
                 "\nwhose family accepts the stewardship of the planet Arrakis. " +
@@ -42,7 +43,7 @@ public class BookActivity extends AppCompatActivity {
                 "\nfor the control of Arrakis and its spice.";
         //TODO: get data from recview
         Book book = new Book(1, "Dune", "Frank Herbert", 300, "https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg",
-                "Test 1", longDesc);*/
+                "Test 1", longDesc);
 
         //passing default value as -1 since none of books in list will have -1
         Intent intent = getIntent();
@@ -60,6 +61,8 @@ public class BookActivity extends AppCompatActivity {
             }
         }
     }
+
+    //getting alreadyreadbooks from utils class we are checking if book exists. if does, disables btn, if not setOnclick activates and adds to array list.
     public void handleAlreadyRead(Book book){
         ArrayList<Book> alreadyReadBooks = Utils.getInstance().getAlreadyReadBooks();
         Boolean existingAlreadyReadBooks = false;
@@ -75,7 +78,13 @@ public class BookActivity extends AppCompatActivity {
             btnAddAlreadyRead.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (Utils.getInstance().addToAlreadyRead(book)){
+                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+                        //TODO: navigate user
 
+                    }else{
+                        Toast.makeText(BookActivity.this, "Book Could Not Be Added. Try Again", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }
@@ -97,6 +106,7 @@ public class BookActivity extends AppCompatActivity {
         descriptionText = findViewById(R.id.descriptionText);
         txtDescription = findViewById(R.id.txtDescription);
     }
+
 
     private void setData(Book book){
         txtBookName.setText(book.getName());
