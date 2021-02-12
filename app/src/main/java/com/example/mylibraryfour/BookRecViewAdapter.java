@@ -50,7 +50,10 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //creating intent with mContext which receiving with constructor of this adapter. destinaiton of intent is bookactivitiy.class. calling putExtra method with intent and passing int (book id). after with help of context, starting activity (bookactivity.class)
                 Intent intent = new Intent(mContext, BookActivity.class);
+                //input parcelable (interface that serializes class when transferring from one activity to another)
+                intent.putExtra("bookId", books.get(position).getId());
                 mContext.startActivity(intent);
             }
         });
