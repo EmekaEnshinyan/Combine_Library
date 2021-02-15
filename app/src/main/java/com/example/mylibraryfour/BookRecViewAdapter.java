@@ -55,11 +55,12 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
                 //creating intent with mContext which receiving with constructor of this adapter. destinaiton of intent is bookactivitiy.class. calling putExtra method with intent and passing int (book id). after with help of context, starting activity (bookactivity.class)
                 Intent intent = new Intent(mContext, BookActivity.class);
                 //input parcelable (interface that serializes class when transferring from one activity to another)
-                intent.putExtra(BOOK_ID_KEY, books.get(position).getId());
+                intent.putExtra(BOOK_ID_KEY,
+                        books.get(position).getId());
                 mContext.startActivity(intent);
             }
         });
-
+        //PLACES HOLDER FOR ARRAYLIST
         holder.txtAuthor.setText(books.get(position).getAuthor());
         holder.txtDescription.setText(books.get(position).getShortDesc());
 
