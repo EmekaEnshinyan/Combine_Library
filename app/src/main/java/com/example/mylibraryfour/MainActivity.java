@@ -127,9 +127,10 @@ public class MainActivity extends AppCompatActivity {
         txtPasswordWarn = findViewById(R.id.txtPasswordWarn);
         txtPasswordReenterWarn = findViewById(R.id.txtPasswordReenterWarn);
 
+        //TODO: removed spinnerCountries. Needs to be added
         /*spinnerCountries = findViewById(R.id.spinnerCountries);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                //TODO: array resource value inserted. test for bugs
+
                 R.array.spinnerCountries, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
