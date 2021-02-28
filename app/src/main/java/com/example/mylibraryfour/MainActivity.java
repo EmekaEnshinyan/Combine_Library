@@ -61,9 +61,10 @@ public class MainActivity extends AppCompatActivity {
         if (validateData()) {
             btnRegister.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    //TODO: intent takes two args. make sure it directs to books menu
                     Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                     startActivity(intent);
+                    //TODO: intent takes two args. make sure it directs to books menu
+
                 }
             });
         }
