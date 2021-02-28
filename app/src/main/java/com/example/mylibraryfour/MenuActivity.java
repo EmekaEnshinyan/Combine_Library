@@ -20,8 +20,38 @@ public class MenuActivity extends AppCompatActivity {
         btnAllBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, AllBooksActivity.class);
-                startActivity(intent);
+                Intent intentAll = new Intent(MenuActivity.this, AllBooksActivity.class);
+                startActivity(intentAll);
+            }
+        });
+        //TODO: need new classes. all btns shouldn't navigate to AllBooksActivity
+        btnCurrentBooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentCurrent = new Intent(MenuActivity.this, AllBooksActivity.class);
+                startActivity(intentCurrent);
+
+            }
+        });
+        btnFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFavorites = new Intent(MenuActivity.this, AllBooksActivity.class);
+                startActivity(intentFavorites);
+            }
+        });
+        btnWishList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentWishlist = new Intent(MenuActivity.this, AllBooksActivity.class);
+                startActivity(intentWishlist);
+            }
+        });
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentAbout = new Intent(MenuActivity.this, AllBooksActivity.class);
+                startActivity(intentAbout);
             }
         });
     }
