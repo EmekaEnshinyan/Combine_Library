@@ -5,7 +5,7 @@ Version: alpha 1.1
 # Xml & Terminal Parameters Builder (Under Construction)
 
 [![](https://img.shields.io/badge/4.1-Android-blue.svg?)](https://www.apache.org/licenses/LICENSE-2.0) 
-[![](https://img.shields.io/badge/Build-inprogress-green.svg?)] 
+![](https://img.shields.io/badge/Build-inprogress-yellow.svg?)
 
 *Questions?  Comments?  Feedback? Email me at emeka.enshinyan@gmail.com 
 
