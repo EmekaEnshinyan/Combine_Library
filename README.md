@@ -10,5 +10,5 @@ Version: alpha 1.1
 *Questions?  Comments?  Feedback? Email me at emeka.enshinyan@gmail.com 
 
 ---
-The Emu Anxiety Relief Android App is designed to provide visual and auditorial materials to users based on their preferences. The goal is to have the User register with the app, answer a short series of questions, and then be presented with a page (activity) that will make suggestions on what they could use from the apps database that can help them relax.
+The Emu Anxiety Relief Android App is designed to provide visual and auditory materials to users based on their preferences. The goal is to have the User register with the app, answer a short series of questions, and then be presented with a page (activity) that will make suggestions on what they could use from the apps database that can help them relax.
 ---
